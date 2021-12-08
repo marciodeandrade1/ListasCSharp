@@ -37,6 +37,7 @@ namespace Listas
             }
 
 
+            Console.WriteLine("=== Contagem de itens da Lista de Inteiros ====");
             //Criando uma lista to tipo inteiro
             List<int> ListaIdades = new List<int>();
             ListaIdades.Add(35);
@@ -45,6 +46,8 @@ namespace Listas
             ListaIdades.Add(15);
             ListaIdades.Add(48);
 
+            //Exibe contagem de itens
+            Console.WriteLine("Contagem: {0}", ListaIdades.Count);
             
         }
     }
