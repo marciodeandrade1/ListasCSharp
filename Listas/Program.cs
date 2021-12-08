@@ -18,10 +18,24 @@ namespace Listas
             ListaAutores.Add("Giovanna Rufini de Andrade");
             ListaAutores.Add("Milena Rufini de Andrade");
 
+            //para exibir os itens pe necessário percorrer a lista
+            foreach (string autor in ListaAutores)
+            {
+                Console.WriteLine(autor);
+            }
+
+            Console.WriteLine("=== Outra lista == ");
+
             //Forma alternativa podemos passar uma Array para criar a lista de objetos
             string[] autores = { "Angela", "Marcelo", "José", "João", "Maria" };
 
             List<string> ranking = new List<string>(autores);
+
+            foreach(string escritores in autores)
+            {
+                Console.WriteLine(escritores);
+            }
+
 
             //Criando uma lista to tipo inteiro
             List<int> ListaIdades = new List<int>();
@@ -30,6 +44,8 @@ namespace Listas
             ListaIdades.Add(22); 
             ListaIdades.Add(15);
             ListaIdades.Add(48);
+
+            
         }
     }
 }
