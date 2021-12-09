@@ -48,7 +48,36 @@ namespace Listas
 
             //Exibe contagem de itens
             Console.WriteLine("Contagem: {0}", ListaIdades.Count);
-            
+
+
+            //A propriedade Capacity recebe e define o número de itens que uma lista pode conter sem redimensionar.
+            //A capacidade é sempre maior ou igual ao valor da Contagem.
+
+
+            Console.WriteLine("=== Capacity ===");
+            List<string> ListaDeAutores = new List<string>();
+
+            //Adicionar itens na lista
+            ListaDeAutores.Add("Marcio de Andrade");
+            ListaDeAutores.Add("Giovanna Rufini de Andrade");
+            ListaDeAutores.Add("Milena Rufini de Andrade");
+            ListaDeAutores.Add("Sandra Marcia de Andrade");
+            ListaDeAutores.Add("Alexandre Guilherme de Andrade");
+            ListaDeAutores.Add("Maria Eduarda de Andrade Siqueira");
+            ListaDeAutores.Add("Ian Meneguel de Andrade");
+            ListaDeAutores.Add("Mariana Meneguel de Andrade");
+            ListaDeAutores.Add("Vinicius Meneguel de Andrade");
+            ListaDeAutores.Add("Sandro Andrade");
+
+            //Original Capacity
+            Console.WriteLine("Original Capacity: {0}", ListaDeAutores.Capacity);
+            //Trim excess
+            ListaDeAutores.TrimExcess();
+            Console.WriteLine("Trimmed Capacity: {0}", ListaDeAutores.Capacity);
+            //Update Capacity
+            ListaDeAutores.Capacity = 20;
+            Console.WriteLine(ListaDeAutores.Capacity);
+            Console.WriteLine("Update Capacity: {0}", ListaDeAutores.Capacity);
         }
     }
 }
