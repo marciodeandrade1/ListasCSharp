@@ -78,6 +78,93 @@ namespace Listas
             ListaDeAutores.Capacity = 20;
             Console.WriteLine(ListaDeAutores.Capacity);
             Console.WriteLine("Update Capacity: {0}", ListaDeAutores.Capacity);
+
+            Console.WriteLine("=== Contagem ===");
+            Console.WriteLine(" ");
+            // Count
+            Console.WriteLine("Count: {0} ", ListaDeAutores.Count);
+
+
+            Console.WriteLine("=== Pega conteúdo da lista pelo índice ===");
+            List<string> ListaDeNovosAutores = new List<string>();
+
+            //Adicionar itens na lista
+            ListaDeNovosAutores.Add("Marcio de Andrade");
+            ListaDeNovosAutores.Add("Giovanna Rufini de Andrade");
+            ListaDeNovosAutores.Add("Milena Rufini de Andrade");
+            ListaDeNovosAutores.Add("Sandra Marcia de Andrade");
+            ListaDeNovosAutores.Add("Alexandre Guilherme de Andrade");
+
+            //Recebe o primeiro item da lista
+            string novoautor = ListaDeNovosAutores[0];
+            Console.WriteLine(novoautor);
+
+            Console.WriteLine("=== Remove item da lista ===");
+            //insere um range de itens
+            string[] nomes = { "José", "João", "Catarina", "Angela" };
+
+            ListaDeNovosAutores.InsertRange(4, nomes);
+
+
+            foreach (string nome in ListaDeNovosAutores)
+            {
+                Console.WriteLine(nome);
+            }
+
+            Console.WriteLine("=== Remove determinado Item da lista ===");
+            Console.WriteLine(" ");
+            ListaDeNovosAutores.Remove("Marcio de Andrade");
+            foreach (string nome in ListaDeNovosAutores)
+            {
+                Console.WriteLine(nome);
+            }
+
+            Console.WriteLine("=== Remove determinado Item pela posição ===");
+            Console.WriteLine(" ");
+            //remove item da posição 3
+            ListaDeNovosAutores.RemoveAt(3);
+
+            foreach (string nome in ListaDeNovosAutores)
+            {
+                Console.WriteLine(nome);
+            }
+
+            Console.WriteLine("=== Remove determinado Item pelo Range ===");
+            Console.WriteLine(" ");
+
+            //remove 2 itens a partir da posição 4
+            ListaDeNovosAutores.RemoveRange(4, 2);
+
+            foreach (string nome in ListaDeNovosAutores)
+            {
+                Console.WriteLine(nome);
+            }
+            foreach (string nome in ListaDeNovosAutores)
+            {
+                Console.WriteLine(nome);
+            }
+
+            Console.WriteLine("=== Pesquisa na lista ===");
+
+            int itemPosicao = ListaDeNovosAutores.BinarySearch("Milena Rufini de Andrade");
+            Console.WriteLine("Item encontrado na posição: {0}", itemPosicao + 1);
+
+            Console.WriteLine("=== Ordenação da lista ===");
+            Console.WriteLine("");
+            Console.WriteLine("Lista Original");
+            foreach(var autor in ListaDeNovosAutores)
+            {
+                Console.WriteLine(autor);
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("Lista Ordenada");
+            ListaDeNovosAutores.Sort();
+            foreach (var autor in ListaDeNovosAutores)
+            {
+                Console.WriteLine(autor);
+            }
+
         }
     }
 }
